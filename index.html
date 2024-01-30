@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Sci-Fi hand Battle</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Sci-Fi hand Battle</h1>
+        <div id="result" class="result">Choose an option!</div>
+        <div class="options">
+            <button onclick="playGame('rock')" class="moveable">
+                <img src="assets/rock.jpg" alt="Rock">
+                <span>Rock</span>
+            </button>
+            <button onclick="playGame('paper')" class="moveable">
+                <img src="assets/paper.jpg" alt="Paper">
+                <span>Paper</span>
+            </button>
+            <button onclick="playGame('scissors')" class="moveable">
+                <img src="assets/scissors.jpg" alt="Scissors">
+                <span>Scissors</span>
+            </button>
+            <button onclick="playGame('lizard')" class="moveable">
+                <img src="assets/lizard.jpg" alt="Lizard">
+                <span>Lizard</span>
+            </button>
+            <button onclick="playGame('spock')" class="moveable">
+                <img src="assets/spock.jpg" alt="Spock">
+                <span>Spock</span>
+            </button>
+        </div>
+        
+        <div class="level-selection">
+            <label for="level">Choose a Level:</label>
+            <select id="level" onchange="changeLevel(this.value)">
+                <option value="1">Level 1</option>
+                <option value="2">Level 2</option>
+                <option value="3">Level 3</option>
+            </select>
+        </div>
+
+        
+        <div class="scoreboard">
+            <span>Wins: <span id="wins">0</span></span>
+            <span>Losses: <span id="losses">0</span></span>
+            <span>Ties: <span id="ties">0</span></span>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
